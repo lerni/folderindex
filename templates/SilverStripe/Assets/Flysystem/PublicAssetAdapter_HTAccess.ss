@@ -39,11 +39,3 @@ AddHandler default-handler php phtml php3 php4 php5 inc
 		Header set X-Robots-Tag "noindex, noarchive, nosnippet"
 	</If>
 <% end_loop %></IfModule>
-
-<IfModule mod_headers.c>
-  Header append Vary Accept env=REDIRECT_accept
-</IfModule>
-
-<IfModule mod_mime.c>
-  AddType image/webp .webp
-</IfModule>

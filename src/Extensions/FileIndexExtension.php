@@ -10,7 +10,7 @@ class FileIndexExtension extends Extension
     {
         if ($this->owner->parent()->ShowInSearch)
         {
-            return true;
+            return $this;
         } else {
             return false;
         }

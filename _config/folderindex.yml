@@ -11,7 +11,7 @@ SilverStripe\AssetAdmin\Forms\FolderFormFactory:
   extensions:
     - Kraftausdruck\Extensions\IndexFormFolderExtension
 
-# SilverStripe\AssetAdmin\Forms\FileFormFactory:
-#   extensions:
-#     - Kraftausdruck\Extensions\IndexFormFileExtension
+SilverStripe\AssetAdmin\Forms\FileFormFactory:
+  extensions:
+    - Kraftausdruck\Extensions\IndexFormFileExtension
 

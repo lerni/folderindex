@@ -1,4 +1,4 @@
 de:
   Kraftausdruck\Extensions\IndexFormFileExtension:
     ShowInSearch: 'Indexierung untergeordneter Dateien'
-    NoindexNotification: 'Indizierung per übergeordnetem Ordner deaktiviert!'
+    NoindexNotification: 'Indizierung per übergeordnetem Ordner ({parent}) deaktiviert!'
