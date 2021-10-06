@@ -1,0 +1,17 @@
+---
+Name: folderindex
+After:
+  - 'assetadmin'
+---
+SilverStripe\Assets\File:
+  extensions:
+    - Kraftausdruck\Extensions\FileIndexExtension
+
+SilverStripe\AssetAdmin\Forms\FolderFormFactory:
+  extensions:
+    - Kraftausdruck\Extensions\IndexFormFolderExtension
+
+# SilverStripe\AssetAdmin\Forms\FileFormFactory:
+#   extensions:
+#     - Kraftausdruck\Extensions\IndexFormFileExtension
+
