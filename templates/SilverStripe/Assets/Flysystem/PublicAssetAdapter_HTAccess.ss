@@ -34,10 +34,10 @@ AddHandler default-handler php phtml php3 php4 php5 inc
     RewriteRule .* ../index.php [QSA]
 </IfModule>
 
-<IfModule mod_rewrite.c><% loop $list("SilverStripe\Assets\Folder").filter("ShowInSearch", 0) %>
-	<Directory "/{$getFilename}"><FilesMatch ^>
-		Header set X-Robots-Tag "noindex, nofollow"
-	</FilesMatch></Directory>
+<IfModule mod_headers.c><% loop $list("SilverStripe\Assets\Folder").filter("ShowInSearch", 0) %>
+	<If "%{REQUEST_URI} =~ m#^/assets/{$getFilename}#">
+		Header set X-Robots-Tag "noindex, noarchive, nosnippet"
+	</If>
 <% end_loop %></IfModule>
 
 <IfModule mod_headers.c>
