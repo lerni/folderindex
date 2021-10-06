@@ -1,0 +1,4 @@
+it:
+  Kraftausdruck\Extensions\IndexFormFileExtension:
+    ShowInSearch: 'Indicizzazione dei file discendenti'
+    NoindexNotification: 'Indicizzazione disabilitata per la cartella superiore ({parent})!'
