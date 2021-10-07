@@ -17,12 +17,12 @@ https://developers.google.com/search/blog/2019/07/rep-id
 Run `dev/build`
 
 ## Getting started / Usage
-[ ] Uncheck the `Indexing child files` CheckBox of a folder under `Permissions`, next time `assets/.htaccess` is build, it creates rules accordingly. AFAIK it so far just writs to the file on `dev/build` (todododd?). So this means, ***you have to `dev/build` after changing this setting*** :(
+[ ] Uncheck the `Indexing child files` CheckBox of a folder under `Permissions`, save and rules in `assets/.htaccess` 'll be created accordingly.
 
 ## Credits
 Thanks to [@digitall-it](https://github.com/digitall-it/) for inspiration and the italian translation.
 
 ## ToDo
 - [x] Hook-in to write `assets/.htaccess` rather than just `dev/build`?
-- [ ] roles are falsely also set for sub-folders which are blocked trough parents
-- [ ] show X-Robots-Tag alert-waring also in file section rather than just in the Details panel
+- [ ] roles are falsely also set for sub-folders, which are blocked trough parents
+- [ ] show X-Robots-Tag alert-waring also in file section rather than just in the Details panel?

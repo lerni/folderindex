@@ -28,8 +28,7 @@ class FileIndexExtension extends Extension
             }
         }
 
-        if (count($shouldBlock))
-        {
+        if (count($shouldBlock)) {
             // should return smallest string - top most
             usort($shouldBlock, function ($a, $b) {
                 return strlen($a) < strlen($b);
