@@ -2,8 +2,10 @@
 
 namespace Kraftausdruck\Extensions;
 
+use SilverStripe\Assets\File;
 use SilverStripe\Assets\Folder;
 use SilverStripe\Core\Extension;
+use SilverStripe\Assets\Flysystem\PublicAssetAdapter;
 
 class FileIndexExtension extends Extension
 {
@@ -33,10 +35,20 @@ class FileIndexExtension extends Extension
                 return strlen($a) < strlen($b);
             });
             $folderLink = reset($shouldBlock);
+            // todo
+            // https://github.com/silverstripe/silverstripe-assets/issues/253
             $cause = Folder::get()->filter(['File.FileFilename' => $folderLink])->first();
             return $cause;
         } else {
             return false;
+        }
+    }
+
+    public function onAfterWrite()
+    {
+        if ($this->owner->isChanged('ShowInSearch')) {
+            $assets = new PublicAssetAdapter;
+            $assets->flush();
         }
     }
 }
