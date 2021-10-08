@@ -1,4 +1,4 @@
-# Silverstripe FolderIndex - POC
+# Silverstripe FolderIndex
 Silverstripe FolderIndex let you manage visibility of files for Search Engines on parent folder basis, by setting X-Robots-Tag `noindex`, `nofollow`, `noimageindex`, `noarchive`, `nosnippet` in the header. By uncheck `ShowInSearch` under `Details` of a folder, the header 'll be set on all files contained, inclusive files in sub-folders.
 
 The module also adds `NonFileIndex()` to `File`. This can be used for checking in xml-sitemap, schema etc. and is used in CMS/Assets to indicate, if a file has X-Robots-Tag headers set per parent Folder or Parten/Parent/etc. If headers are set, it return the Folder-Object that blocks indexing, otherwise false. So far this module just integrates with Apache `.htaccess`.
