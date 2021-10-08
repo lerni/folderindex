@@ -15,8 +15,7 @@ class IndexFormFolderExtension extends Extension
         $ShowInSearchField = CheckboxField::create('ShowInSearch', _t('Kraftausdruck\Extensions\IndexFormFileExtension.ShowInSearch', 'Indexing child files'));
 
         $permissionTab = $fields->findTab('Editor.Permissions');
-        if ($permissionTab)
-        {
+        if ($permissionTab) {
             $fields->insertAfter('EditorGroups', $ShowInSearchField);
         }
     }
