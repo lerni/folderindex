@@ -9,7 +9,7 @@ use SilverStripe\Assets\Flysystem\PublicAssetAdapter;
 class FileIndexExtension extends Extension
 {
     // returns Folder-DataObject causing blocking it, otherwise false
-    public function NonFileIndex()
+    public function NoFileIndex()
     {
         $blockingFolders = Folder::get()->filter(['ShowInSearch' => 0]);
         $blockingFoldersArr = [];
@@ -44,8 +44,11 @@ class FileIndexExtension extends Extension
 
             // so we iterate up to next parent with ShowInSearch = 0
             $parentIterInstance = $this->owner->parent();
-            while($parentIterInstance->ShowInSearch) {
+            $counter = 0;
+            $max = 10;
+            while($parentIterInstance->ShowInSearch and ($counter < $max)) {
                 $parentIterInstance = $parentIterInstance->parent();
+                $counter++;
             }
             return $parentIterInstance;
 
