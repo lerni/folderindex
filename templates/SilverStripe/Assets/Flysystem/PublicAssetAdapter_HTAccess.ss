@@ -35,7 +35,5 @@ AddHandler default-handler php phtml php3 php4 php5 inc
 </IfModule>
 
 <IfModule mod_headers.c><% loop $list("SilverStripe\Assets\Folder").filter("ShowInSearch", 0) %>
-	<If "%{REQUEST_URI} =~ m#^/assets/{$getFilename}#">
-		Header set X-Robots-Tag "noindex, nofollow, noimageindex, noarchive, nosnippet"
-	</If>
+	Header set X-Robots-Tag "noindex, nofollow, noimageindex, noarchive, nosnippet" "expr=%{REQUEST_URI} =~ m#^/assets/{$getFilename}#"
 <% end_loop %></IfModule>
