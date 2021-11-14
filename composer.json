@@ -17,6 +17,9 @@
     "require": {
         "silverstripe/asset-admin": "^1.6"
     },
+	"suggest": {
+		"gorriecoe/silverstripe-robots": "robots.txt generation for Silverstripe"
+	},
     "autoload": {
         "psr-4": {
             "App\\": "folderindex/src"
