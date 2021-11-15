@@ -16,6 +16,11 @@ Run `dev/build`
 ## Getting started / Usage
 - [ ] Uncheck the `Indexing child files` CheckBox of a folder under `Permissions`, save and rules in `assets/.htaccess` 'll be created accordingly.
 
+![Folder 'ShowInSearch' Checkbox](docs/assets/folder.png?raw=true "Folder 'ShowInSearch' Checkbox")
+![File X-Robots Notification](docs/assets/file.png?raw=true "File X-Robots Notification")
+
+This module "overwrites" `SilverStripe/Assets/Flysystem/PublicAssetAdapter_HTAccess.ss`
+
 ## Credits
 Thanks to [@zauberfisch](https://github.com/zauberfisch/) & [@digitall-it](https://github.com/digitall-it/) for inspiration and the Italian translation.
 
