@@ -12,7 +12,7 @@ class IndexFormFileExtension extends Extension
     {
         $editorTab = $fields->findTab('Editor.Details');
         $record = isset($context['Record']) ? $context['Record'] : null;
-        if ($editorTab && $record->NoFileIndex()) {
+        if ($editorTab && $record->NoFileIndex()->ID != 0) {
             $message = _t('Kraftausdruck\Extensions\IndexFormFileExtension.NoindexNotification', 'Indexing disabled per parent folder ({parent})!', ['parent' => $record->NoFileIndex()->Title]);
             $NoIndexNotificationField = LiteralField::create('X-Robots-Tag', '<p class="alert alert-warning">' . $message . '</p>');
             $fields->insertBefore('Title', $NoIndexNotificationField);
