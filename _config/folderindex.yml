@@ -18,7 +18,7 @@ SilverStripe\AssetAdmin\Forms\FileFormFactory:
 
 ---
 Only:
-  moduleexists: 'robotsconfig'
+  moduleexists: 'gorriecoe/silverstripe-robots'
 ---
 gorriecoe\Robots\Robots:
   extensions:
