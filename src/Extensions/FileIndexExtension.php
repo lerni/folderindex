@@ -27,7 +27,9 @@ class FileIndexExtension extends Extension
                 $parentIterInstance = $parentIterInstance->parent();
                 $counter++;
             }
-            return $parentIterInstance;
+            if ($parentIterInstance->ID != 0) {
+                return $parentIterInstance;
+            }
 
         } else {
             return false;
