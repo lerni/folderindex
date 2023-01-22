@@ -22,7 +22,7 @@
 	},
     "autoload": {
         "psr-4": {
-            "Kraftausdruck\\Extensions\\": "src/"
+            "Kraftausdruck\\": "src/"
         }
     },
     "minimum-stability": "dev",
