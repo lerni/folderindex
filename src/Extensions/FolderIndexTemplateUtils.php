@@ -8,21 +8,24 @@ use SilverStripe\ORM\ArrayList;
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\View\TemplateGlobalProvider;
 
-class FolderIndexTemplateUtils implements TemplateGlobalProvider {
+class FolderIndexTemplateUtils implements TemplateGlobalProvider
+{
 
     private static $utility_functions = [
         'KraftausdruckFolderIndex'
     ];
 
-    public static function get_template_global_variables() {
+    public static function get_template_global_variables()
+    {
         return static::$utility_functions;
     }
 
-    public static function KraftausdruckFolderIndex() {
+    public static function KraftausdruckFolderIndex()
+    {
 
         $fileClasses = ClassInfo::subclassesFor(File::class);
 
-        if (count($fileClasses)) {
+        if (count($fileClasses) && ClassInfo::hasTable('File')) {
             $blockingFolders = Folder::get()->filter(['ShowInSearch' => 0]);
             $blockingFoldersArr = [];
             foreach ($blockingFolders as $bf) {
@@ -38,7 +41,7 @@ class FolderIndexTemplateUtils implements TemplateGlobalProvider {
                     }
                 }
             }
-            if(count($subBlockingFoldersArr)) {
+            if (count($subBlockingFoldersArr)) {
                 $blockingFolders = $blockingFolders->exclude(['ID' => $subBlockingFoldersArr]);
             }
         } else {

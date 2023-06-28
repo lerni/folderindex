@@ -23,14 +23,13 @@ class FileIndexExtension extends Extension
             $parentIterInstance = $this->owner->parent();
             $counter = 0;
             $max = 10;
-            while($parentIterInstance->ShowInSearch and ($counter < $max)) {
+            while ($parentIterInstance->ShowInSearch and ($counter < $max)) {
                 $parentIterInstance = $parentIterInstance->parent();
                 $counter++;
             }
             if ($parentIterInstance->ID != 0) {
                 return $parentIterInstance;
             }
-
         } else {
             return false;
         }
