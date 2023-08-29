@@ -2,9 +2,9 @@
 
 namespace Kraftausdruck\Extensions;
 
-use SilverStripe\ORM\DataExtension;
-use gorriecoe\Robots\Robots;
+use TractorCow\Robots\Robots;
 use SilverStripe\Assets\Folder;
+use SilverStripe\ORM\DataExtension;
 
 class RobotsFoldersExtension extends DataExtension
 {

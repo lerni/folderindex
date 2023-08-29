@@ -18,7 +18,7 @@
 		"silverstripe/asset-admin": "^1.6"
 	},
 	"suggest": {
-		"gorriecoe/silverstripe-robots": "robots.txt generation for Silverstripe"
+		"tractorcow/silverstripe-robots": "robots.txt generation for Silverstripe"
 	},
 	"autoload": {
 		"psr-4": {

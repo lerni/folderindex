@@ -18,8 +18,8 @@ SilverStripe\AssetAdmin\Forms\FileFormFactory:
 
 ---
 Only:
-  moduleexists: 'gorriecoe/silverstripe-robots'
+  moduleexists: 'tractorcow/silverstripe-robots'
 ---
-gorriecoe\Robots\Robots:
+TractorCow\Robots\Robots:
   extensions:
     - Kraftausdruck\Extensions\RobotsFoldersExtension
