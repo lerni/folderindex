@@ -15,7 +15,7 @@
 	"homepage": "https://github.com/lerni/folderindex",
 	"license": "BSD-3-Clause",
 	"require": {
-		"silverstripe/asset-admin": "^1.6"
+		"silverstripe/asset-admin": "^1 || ^2"
 	},
 	"suggest": {
 		"tractorcow/silverstripe-robots": "robots.txt generation for Silverstripe"
