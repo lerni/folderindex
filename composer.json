@@ -3,8 +3,6 @@
 	"type": "silverstripe-vendormodule",
 	"description": "Silverstripe Extension to send  noindex, nofollow for files in foldes that do not ShowInSearch.",
 	"homepage": "https://github.com/lerni/folderindex",
-	"keywords": ["Silverstripe", "assets", "noindex", "File", "Image"],
-	"license": "BSD-3-Clause",
 	"keywords": [
 		"Silverstripe",
 		"assets",
@@ -12,7 +10,6 @@
 		"File",
 		"Image"
 	],
-	"homepage": "https://github.com/lerni/folderindex",
 	"license": "BSD-3-Clause",
 	"require": {
 		"silverstripe/asset-admin": "^1 || ^2"
@@ -22,7 +19,7 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"Kraftausdruck\\Extensions\\": "src/"
+			"Kraftausdruck\\": "src/"
 		}
 	},
 	"minimum-stability": "dev",
