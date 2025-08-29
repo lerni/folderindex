@@ -8,7 +8,11 @@ use SilverStripe\Assets\Flysystem\PublicAssetAdapter;
 
 class FileIndexExtension extends Extension
 {
-    // returns Folder-DataObject causing blocking, otherwise false
+    /**
+     * Returns Folder-DataObject causing blocking, otherwise false
+     *
+     * @return Folder|false
+     */
     public function NoFileIndex()
     {
         $blockingFolders = Folder::get()->filter(['ShowInSearch' => 0]);
@@ -30,15 +34,15 @@ class FileIndexExtension extends Extension
             if ($parentIterInstance->ID != 0) {
                 return $parentIterInstance;
             }
-        } else {
-            return false;
         }
+
+        return false;
     }
 
-    public function onAfterWrite()
+    protected function onAfterWrite(): void
     {
         if ($this->owner->isChanged('ShowInSearch')) {
-            $assets = new PublicAssetAdapter;
+            $assets = new PublicAssetAdapter();
             $assets->flush();
         }
     }

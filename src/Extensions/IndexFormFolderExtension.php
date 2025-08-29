@@ -8,7 +8,7 @@ use SilverStripe\Forms\CheckboxField;
 
 class IndexFormFolderExtension extends Extension
 {
-    public function updateFormFields(FieldList $fields, $controller, $formName, $context)
+    protected function updateFormFields(FieldList $fields, $controller, $formName, $context): void
     {
         // $fields = $form->Fields();
         $ShowInSearchField = CheckboxField::create('ShowInSearch', _t('Kraftausdruck\Extensions\IndexFormFileExtension.ShowInSearch', 'Indexing child files'));

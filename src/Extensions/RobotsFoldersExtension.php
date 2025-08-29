@@ -4,11 +4,11 @@ namespace Kraftausdruck\Extensions;
 
 use TractorCow\Robots\Robots;
 use SilverStripe\Assets\Folder;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 
-class RobotsFoldersExtension extends DataExtension
+class RobotsFoldersExtension extends Extension
 {
-    public function updateDisallowedUrls(&$urls)
+    protected function updateDisallowedUrls(&$urls): void
     {
         if (Robots::config()->disallow_unsearchable) {
             $blockingFolders = Folder::get()->filter(['ShowInSearch' => 0]);

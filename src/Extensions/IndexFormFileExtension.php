@@ -8,7 +8,7 @@ use SilverStripe\Forms\LiteralField;
 
 class IndexFormFileExtension extends Extension
 {
-    public function updateFormFields(FieldList $fields, $controller, $formName, $context)
+    protected function updateFormFields(FieldList $fields, $controller, $formName, $context): void
     {
         $editorTab = $fields->findTab('Editor.Details');
         $record = isset($context['Record']) ? $context['Record'] : null;
