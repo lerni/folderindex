@@ -4,8 +4,8 @@ namespace Kraftausdruck\Extensions;
 
 use SilverStripe\Assets\File;
 use SilverStripe\Assets\Folder;
-use SilverStripe\ORM\ArrayList;
 use SilverStripe\Core\ClassInfo;
+use SilverStripe\Model\List\ArrayList;
 use SilverStripe\View\TemplateGlobalProvider;
 
 class FolderIndexTemplateUtils implements TemplateGlobalProvider
