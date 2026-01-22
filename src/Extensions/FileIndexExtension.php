@@ -2,8 +2,11 @@
 
 namespace Kraftausdruck\Extensions;
 
+use SilverStripe\Assets\File;
 use SilverStripe\Assets\Folder;
 use SilverStripe\Core\Extension;
+use SilverStripe\ORM\DataObject;
+use SilverStripe\Model\List\ArrayList;
 use SilverStripe\Assets\Flysystem\PublicAssetAdapter;
 
 class FileIndexExtension extends Extension
@@ -15,6 +18,13 @@ class FileIndexExtension extends Extension
      */
     public function NoFileIndex()
     {
+        // Check if database is ready before querying
+        // See: https://github.com/lerni/folderindex/issues/3
+        // See: https://github.com/silverstripe/silverstripe-framework/issues/10332
+        if (!DataObject::getSchema()->tablesAreReadyForClass(File::class)) {
+            return new ArrayList([]);
+        }
+
         $blockingFolders = Folder::get()->filter(['ShowInSearch' => 0]);
         if ($blockingFolders->count()) {
 
