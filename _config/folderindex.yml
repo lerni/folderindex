@@ -8,6 +8,9 @@ SilverStripe\Assets\File:
   extensions:
     - Kraftausdruck\Extensions\FileIndexExtension
 
+Kraftausdruck\Extensions\FileIndexExtension:
+  max_parent_lookup_depth: 10
+
 SilverStripe\AssetAdmin\Forms\FolderFormFactory:
   extensions:
     - Kraftausdruck\Extensions\IndexFormFolderExtension
